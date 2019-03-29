@@ -75,7 +75,7 @@ USE_CUDA = 0
 USE_CUDA_PATH = NONE
 
 # whether to enable CUDA runtime compilation
-ENABLE_CUDA_RTC = 1
+ENABLE_CUDA_RTC = 0
 
 # whether use CuDNN R3 library
 USE_CUDNN = 0
@@ -220,13 +220,14 @@ USE_CPP_PACKAGE = 0
 # MXNET_PLUGINS += plugin/sframe/plugin.mk
 USE_CUDA=1
 USE_CUDNN=1
+#CUDA_ARCH := -gencode arch=compute_70,code=sm_70 -gencode arch=compute_70,code=compute_70
 CUDA_ARCH := -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_75,code=sm_75 -gencode arch=compute_75,code=compute_75
 USE_CUDA_PATH=/usr/local/cuda
 USE_LIBJPEG_TURBO=1
 USE_LIBJPEG_TURBO_PATH=/usr
 USE_NCCL=1
-USE_TENSORRT=1
+USE_TENSORRT=0
 ONNX_NAMESPACE=onnx
-USE_DIST_KVSTORE=1
-USE_HOROVOD=1
+USE_DIST_KVSTORE=0
+USE_HOROVOD=0
 USE_MPI_PATH=/usr/local/mpi

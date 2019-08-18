@@ -1,0 +1,4 @@
+pyyaml==3.12
+mxnet
+typing
+portalocker
